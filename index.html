@@ -1,15 +1,71 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <div id="main">
-      <h1>Welcom</h1>
-      <p>
-        <a href="./example.html">example</a>,
-        <a href="./form.html">form</a>,
-        <a href="./nostyle.html">nostyle</a>,
-        <a href="./style1.html">style1</a>,
-        <a href="./style2.html">style2</a>,
-      </p>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>John's Blog</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Home</a></li>
+        <li><a href="form.html">Add</a></li>
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Friend..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
     </div>
-  </body>
+
+    <div class="col-sm-9">
+      <h4><small>My friends</small></h4>
+      <hr>
+      <a href="view.html"><h2>성호 정</h2></a>
+      <h5>Male</h5>
+      <h5><span class="glyphicon glyphicon-time"></span> Phone:010-2588-2222</h5>
+      <h5><span class="label label-warning">컴퓨터공학</span></h5><br>
+      <p>안녕 만나서 반가워. I'm 정성호.</p>
+      <br>
+      <a href="view.html"><h2>Mia Kim</h2></a>
+      <h5>Female</h5>
+      <h5><span class="glyphicon glyphicon-time"></span> Phone:010-8980-2749</h5>
+      <h5><span class="label label-warning">컴퓨터공학</span></h5><br>
+      <p>안녕 만나서 반가워. I'm Mia.</p>
+      <br>
+      <a href="view.html"><h2>Tom Song</h2></a>
+      <h5>Male</h5>
+      <h5><span class="glyphicon glyphicon-time"></span> Phone:010-2393-2342</h5>
+      <h5><span class="label label-info">기타</span></h5><br>
+      <p>안녕 만나서 반가워. I'm Tom.</p>
+      <br>
+      <a href="view.html"><h2>Jason Hwang</h2></a>
+      <h5>Male</h5>
+      <h5><span class="glyphicon glyphicon-time"></span> Phone:010-2588-2883</h5>
+      <h5><span class="label label-danger">전자공학</span></h5><br>
+      <p>안녕 만나서 반가워. I'm Jason.</p>
+      <br>
+    </div>
+    
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p>Footer Text</p>
+</footer>
+
+</body>
 </html>

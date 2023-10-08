@@ -3,14 +3,17 @@
   <head>
     <style>
       input[type="text"] {
-        width: 300px;
+        width: 200px;
         height: 10px;
-        padding: 12px 20px;
+        padding: 12px 5px;
         margin: 8px 0;
         box-sizing: border-box;
       }
       input[type="text"]:focus {
         border: 3px solid #555;
+      }
+      h5{
+        display: inline;
       }
     </style>
     <script>
@@ -62,6 +65,36 @@
     </script>
   </head>
   <body>
+    <p>사용자 정보</p>
+    <div>
+        <div >
+            <h5>성</h5> <input type="text" readonly value="정">
+        </div>
+        <div>
+        <h5>이름</h5><input type="text" readonly value="성호">
+    </div>
+    <div>
+        <h5>이메일</h5><input type="text" readonly value="22000667@handong.ac.kr">
+    </div>
+    <div>
+        <h5>전공</h5><input type="text" readonly value="컴퓨터공학">
+    </div>
+    <div>
+        <h5>생일</h5><input type="text" readonly value="2001/12/30">
+    </div>
+    <div>
+        <h5>핸드폰번호</h5><input type="text" readonly value="010-2807-2599">
+    </div>
+        <div>
+            <h5>성별</h5><input type="text" readonly value="남">
+        </div><div>
+
+        <h5>취미</h5><input type="text" readonly value="영화감상">
+    </div><div>
+        <h5>좋아하는 색</h5><input type="text" readonly value="  " style="background-color: aqua;" width=10px>
+    </div><div>
+        <h5>자기소개</h5><textarea cols="40" rows="5" readonly>안녕 만나서 반가워. I'm 정성호.</textarea><br />
+    </div>
     <p>사용자 정보 입력</p>
     <form
       name="form1"
@@ -143,7 +176,7 @@
       <textarea name="self" cols="40" rows="5"></textarea><br />
       <label for="color">좋아하는 색</label><br />
       <input type="color" name="color" value="#ff0000" /><br />
-      <input type="submit" value="Submit" /><input
+      <input type="submit" value="수정" /><input
         type="reset"
         value="새로입력"
       />
