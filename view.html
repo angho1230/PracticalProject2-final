@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="my.css">
     <script>
         function editClicked(){
             window.location.href = "edit.html";
@@ -23,14 +24,12 @@
       input[type="text"]:focus {
         border: 3px solid #555;
       }
-      h5{
-        display: inline;
-      }
     </style>
   </head>
   <body>
     <p>사용자 정보</p>
-    <div>
+    
+    <div class = "wrapper">
         <div >
             <h5>성</h5> <input type="text" readonly value="정">
         </div>
@@ -58,6 +57,7 @@
         <h5>좋아하는 색</h5><input type="text" readonly value="  " style="background-color: aqua;" width=10px>
     </div><div>
         <h5>자기소개</h5><textarea cols="40" rows="5" readonly>안녕 만나서 반가워. I'm 정성호.</textarea><br />
+    </div>
     </div>
     <button onclick="return deleteClicked()">삭제</button>
     <button name="edit" onclick="return editClicked()">수정</button>

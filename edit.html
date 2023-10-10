@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="my.css">
     <style>
       input[type="text"] {
         width: 200px;
@@ -15,6 +16,7 @@
       h5{
         display: inline;
       }
+      
     </style>
     <script>
       function validateForm() {
@@ -25,8 +27,8 @@
           return false;
         }
         var name = document.form1.uname;
-        if (name.value.length < 2) {
-          alert("이름을 두글자 이상 입력하세요");
+        if (name.value == "") {
+          alert("이름을 입력하세요");
           name.focus();
           return false;
         }
@@ -58,43 +60,13 @@
           return false;
         }
 
-        alert("게시물이 추가됩니다.");
+        alert("게시물이 수정되었습니다.");
         window.location.href = "index.html";
         return true;
       }
     </script>
   </head>
   <body>
-    <p>사용자 정보</p>
-    <div>
-        <div >
-            <h5>성</h5> <input type="text" readonly value="정">
-        </div>
-        <div>
-        <h5>이름</h5><input type="text" readonly value="성호">
-    </div>
-    <div>
-        <h5>이메일</h5><input type="text" readonly value="22000667@handong.ac.kr">
-    </div>
-    <div>
-        <h5>전공</h5><input type="text" readonly value="컴퓨터공학">
-    </div>
-    <div>
-        <h5>생일</h5><input type="text" readonly value="2001/12/30">
-    </div>
-    <div>
-        <h5>핸드폰번호</h5><input type="text" readonly value="010-2807-2599">
-    </div>
-        <div>
-            <h5>성별</h5><input type="text" readonly value="남">
-        </div><div>
-
-        <h5>취미</h5><input type="text" readonly value="영화감상">
-    </div><div>
-        <h5>좋아하는 색</h5><input type="text" readonly value="  " style="background-color: aqua;" width=10px>
-    </div><div>
-        <h5>자기소개</h5><textarea cols="40" rows="5" readonly>안녕 만나서 반가워. I'm 정성호.</textarea><br />
-    </div>
     <p>사용자 정보 입력</p>
     <form
       name="form1"
@@ -103,40 +75,44 @@
       onsubmit="return validateForm()"
       method="post"
     >
-      <label for="ufname">성:</label><br />
+      <label for="ufname">성:</label>
       <input
         type="text"
         id="ufname"
         name="ufname"
         placeholder="성을 입력"
+        value="정"
       /><br />
-      <label for="uname">이름:</label><br />
+      <label for="uname">이름:</label>
       <input
         type="text"
         id="uname"
         name="uname"
         placeholder="이름을 입력"
+        value="성호"
       /><br />
-      <label for="email">이메일:</label><br />
+      <label for="email">이메일:</label>
       <input
         type="text"
         id="email"
         name="email"
+        value="22000667@handong.ac.kr"
         placeholder="이메일을 입력"
       /><br />
-      <label for="major">전공:</label><br />
+      <label for="major">전공:</label>
       <select name="major">
         <option value="1">컴퓨터 공학</option>
         <option value="2">전자 공학</option>
         <option value="3">기계 공학</option>
         <option value="4">기타</option></select
       ><br />
-      <label for="birth">생일:</label><br />
+      <label for="birth">생일:</label>
       <input
         type="date"
         id="birth"
         name="birth"
         placeholder="생일을 입력"
+        value="2001-12-30"
       /><br />
       <label for="mobile">핸드폰번호</label>
       <input
@@ -145,9 +121,10 @@
         name="mobile"
         placeholder="00*-000*-0000"
         pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{3,4}"
+        value="010-2807-2599"
         maxlength="13"
       /><br />
-      <label>성별</label><br />
+      <label>성별</label>
       <input
         type="radio"
         id="gender1"
@@ -163,19 +140,18 @@
         value="1"
         checked
       />영화감상
-      <input type="checkbox" id="hobby2" name="hobby2" value="2" checked />독서
+      <input type="checkbox" id="hobby2" name="hobby2" value="2" />독서
       <input
         type="checkbox"
         id="hobby3"
         name="hobby3"
         value="3"
-        checked
       />스포츠<br />
       <br />
       <label for="self">자기소개</label><br />
-      <textarea name="self" cols="40" rows="5"></textarea><br />
+      <textarea name="self" cols="40" rows="5">안녕 만나서 반가워. I'm 정성호.</textarea><br />
       <label for="color">좋아하는 색</label><br />
-      <input type="color" name="color" value="#ff0000" /><br />
+      <input type="color" name="color" value="#00ffff" /><br />
       <input type="submit" value="수정" /><input
         type="reset"
         value="새로입력"
